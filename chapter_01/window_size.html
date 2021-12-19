@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>web APIs - Window Size</title>
+  <style>
+    .tag {
+      display: inline-block;
+      background-color: thistle;
+      padding: 16px;
+      margin-top: 16px;
+      font-size: 48px;
+    }
+  </style>
+</head>
+<body>
+  <div class="tag">Window Size</div>
+  <script>
+    // ✨ 첫번째 코드 - console에 출력
+    // // window.addEventListener('resize', function() {
+    // //   console.log('resize');
+    // // })
+
+    // // 보통 function() {} 부분은 arrow function으로 줄이고 parameter로 event object가 오게 됨.
+    // // window.addEventListener('resize', (event) => {
+    // //  console.log('resize')
+    // // });
+    // // 하지만, 지금은 전달받은 event를 쓰지 않기 때문에 그냥 매개변수 없이 작성해주면 되는 것!
+    // window.addEventListener('resize', () => {
+    //   console.log('resize') 
+    // });
+    
+    // // ✨ 두번째 코드 - browser에 출력
+    // const tag = document.querySelector('.tag');
+    // window.addEventListener('resize', () => {
+    //   tag.innerHTML = `
+    //   window.screen: 너비 ${window.screen.width}, 높이 ${window.screen.height} <br/>
+    //   window.outer: 너비 ${window.outerWidth}, 높이 ${window.outerHeight} <br/>
+    //   window.inner: 너비 ${window.innerWidth}, 높이 ${window.innerHeight} <br/>
+    //   documentElement.clientWidth: ${document.documentElement.clientWidth}
+    //   `;
+    // });
+
+    // ✨ 세번째 코드 - 두번째 코드를 함수로 refactoring
+    const tag = document.querySelector('.tag');
+    
+    function updateTag() {
+      tag.innerHTML = `
+      window.screen: 너비 ${window.screen.width}, 높이 ${window.screen.height} <br/>
+      window.outer: 너비 ${window.outerWidth}, 높이 ${window.outerHeight} <br/>
+      window.inner: 너비 ${window.innerWidth}, 높이 ${window.innerHeight} <br/>
+      documentElement.clientWidth: ${document.documentElement.clientWidth} <br/>
+      documentElement.clientHeight: ${document.documentElement.clientHeight}
+      `;
+    }
+    
+    window.addEventListener('resize', () => {
+      updateTag();
+    });
+
+    updateTag();
+  
+  </script>
+</body>
+</html>
