@@ -10,6 +10,44 @@
       background-color: black;
       /* overflow: hidden; */
     }
+
+    .lecture-container {
+      background-color: white;
+      width: 800px;
+      height: 1500px;
+      padding: 20px;
+      margin: 10px 0; 
+    }
+
+    .javascript {
+      color: hsl(44, 100%, 50%);
+    }
+
+    .css {
+      color: rgb(0, 110, 255);
+    }
+
+    .mini-ref {
+      background-color: whitesmoke;
+      width: 500px;
+      height: 120px;
+      padding: 30px;
+      margin: 10px 0;
+    }
+    
+    .ref-container {
+      background-color: rgb(236, 235, 235);
+      width: 600px;
+      height: 180px;
+      padding: 20px;
+      margin: 10px 0;
+    }
+
+    span {
+      color: white;
+      font-weight: 700;
+    }
+
     div {
       width: 250px;
       height: 250px;
@@ -19,12 +57,90 @@
 
     }
 
+
     .special {
       background-color: pink;
+    }
+
+    aside {
+      position: fixed;
+      top: 20px;
+      right: 20px;
     }
   </style>
 </head>
 <body>
+  <div class="lecture-container">
+    <h1>
+      브라우저 좌표
+    </h1>
+      <h2>👉🏻 left & top</h2>
+        <ul>
+          <li><h3>left</h3></li>
+            <p><b class="javascript">JS ➡️ </b>: <b>Browser 맨 왼쪽</b>(x축 0, 왼쪽에서 오른쪽 방향으로 커짐)<b><u>부터</u></b> <u>요소의 맨 왼쪽 모서리</u>까지의 거리</p>      
+          <li><h3>top</h3></li>
+            <p><b class="javascript">JS ⬇️</b>: <b>Browser 맨 위쪽</b>(y축 0, 위에서 아래 방향으로 커짐)<b><u>부터</u></b> <u>요소의 맨 위쪽 모서리</u>까지의 거리</p>
+        </ul>
+      <br/>
+
+      <h2>👉🏻 right & bottom</h2>
+        <ul>
+          <li><h3>right</h3></li>
+            <p><b class="javascript">JS ➡️ </b>: <b>Browser <u>맨 왼쪽</u>(x축 0, 왼쪽에서 오른쪽 방향으로 커짐)부터</b> <u>요소의 맨 오른쪽 모서리</u>까지의 거리</p>      
+            <p><b class="css">CSS ⬅️ </b>: <b>Browser <u>맨 오른쪽</b></u>부터 <u>요소의 맨 오른쪽 모서리</u>까지의 거리</p>      
+          <li><h3>bottom</h3></li>
+            <p><b class="javascript">JS ⬇️</b>: <b>Browser <u>맨 위쪽</u>(y축 0, 위에서 아래 방향으로 커짐)부터</b> <u>요소의 맨 아랫쪽 모서리</u>까지의 거리</p>
+            <p><b class="css">CSS ⬆️ </b>: <b>Browser <u>맨 아랫쪽</b></u>부터 <u>요소의 맨 아랫쪽 모서리</u>까지의 거리</p>
+            </br>
+            <div class="mini-ref">
+              <b>ref.</b><br/><br/>
+              CSS에서 <b>position 을 absolute 나 relative 로 지정</b>하게 되면,<br/>
+              <b>top, left, right, bottom 을 이용한 position 지정이 가능</b>하게 되는데,<br/>
+              이 때 <b class="css">CSS position 의 bottom & right 계산 방향</b> 이<br/> 
+              <b class="javascript">JS getBoundingClientRect API 의 bottom & right 계산 방향</b> 과 <b class="css">다름.</b>
+            </div>
+        </ul>
+        <br/>
+        <h2>👉🏻 Client x,y & Page x, y</h2>
+          <h3>JS DOM에서 어떤 event(예를들면 onclick, onkeyup, ...)가 발생하면<br/> 
+          해당 event Object가 내가 등록한 EventListener에 전달됨.</br>
+          event에는 Client x, y 값이 들어있음.
+          </h3>
+          <ul>
+            <li><h3>Client x, y</h3></li>
+            <p>
+              (사용자가 보고 있는 페이지에 상관 없이)<br/>
+              <b>
+                Browser Window창 기준 얼만큼 떨어진 x, y 위치인지
+              </b>
+            </p>
+            <br/>
+            <li><h3>Page x, y</h3></li>
+            <p>
+              <b>
+                사용자가 보고 있는 page 기준 얼만큼 떨어진 x, y 위치인지
+              </b>
+            </p>
+          </ul>
+
+    <br/>
+    <br/>
+
+    <div class="ref-container">
+      ref.  <b><u>Element</u>.getBoundingClientRect()</b><br/>
+      <br/>
+      <b >👉🏻 getBoundingClientRect()</b>는<br/> 
+      ㅤㅤ<b>Element Object 안에 들어있는 API.</b> 즉, '함수'임.<br/>
+      <br/>
+      <b>👉🏻 <u>Element</u></b>는<br/>
+      ㅤㅤ브라우저 위에 올라가있는 <b><u>DOM에 들어있는 모든 요소들.</u> 즉, 모든 tag들은 Element임.</b><br/>
+      ㅤㅤ따라서, <b></b>우리가 html에 작성한 모든 요소들은 getBoundingClientRect 함수를 갖고 있음.<br/></b>
+    </div>
+  </div>
+  <br/>
+  <span> 👇🏻 아래는 좌표(coordinates) 실습!! 👇🏻 </span>
+  <br/>
+  <br/>
   <div></div>
   <div></div>
   <div></div>
@@ -35,6 +151,9 @@
   <div class="special"></div>
   <div></div>
   <div></div>
+  <button class="scroll-by">Scroll by 100px(y)</button>
+  <button class="scroll-to">Scroll to 100px(y)</button>
+  <button class="scroll-into">Scroll into sepcial</button>
   <script>
     const special = document.querySelector('.special');
     special.addEventListener('click', (event) => {
