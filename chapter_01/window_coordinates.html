@@ -151,9 +151,11 @@
   <div class="special"></div>
   <div></div>
   <div></div>
-  <button class="scroll-by">Scroll by 100px(y)</button>
-  <button class="scroll-to">Scroll to 100px(y)</button>
-  <button class="scroll-into">Scroll into sepcial</button>
+  <aside>
+    <button class="scroll-by">Scroll by 100px(y)</button>
+    <button class="scroll-to">Scroll to 100px(y)</button>
+    <button class="scroll-into">Scroll into sepcial</button>
+  </aside>
   <script>
     const special = document.querySelector('.special');
     special.addEventListener('click', (event) => {
@@ -162,6 +164,31 @@
       console.log(`client: ${event.clientX}, ${event.clientY}`);
       console.log(`page: ${event.pageX}, ${event.pageY}`);
     });
+
+    // 변수를 선언하여 querySelector로 각button의 class를 select하여 연결한 DOM요소를 각 변수에 할당해둔다.
+    const scrollBy = document.querySelector('.scroll-by');
+    const scrollTo = document.querySelector('.scroll-to');
+    const scrollInto = document.querySelector('.scroll-into');
+    
+    // 각 변수에 EventListener를 등록해준다.
+    //scrollBy요소에서 click이벤트가 발생하면, 우리가 등록해둔 콜백함수를 실행해줘~
+    scrollBy.addEventListener('click', ()=>{
+      // window에 있는 scrollBy라는 API를 이용할 것임.
+      // window.scrollBy(0, 100);
+      window.scrollBy({top: 100, left: 0, behavior: "smooth"}); // mdn javascript scroll 로 구글에 서칭하면 window.scroll API에 대한 사항을 자세히 알고, 사용할 수 있음.
+    });
+    
+    //scrollTo요소에서 click이벤트가 발생하면, 우리가 등록해둔 콜백함수를 실행해줘~
+    scrollTo.addEventListener('click', ()=>{
+      // window에 있는 scrollTo라는 API를 이용할 것임.
+      window.scrollTo(0, 100);
+    });
+    //scrollInto요소에서 click이벤트가 발생하면, 우리가 등록해둔 콜백함수를 실행해줘~
+    scrollInto.addEventListener('click', ()=>{
+      // Element의 special Object 안에 있는 scrollIntoView라는 API를 사용할 것임.
+      special.scrollIntoView();
+    });
+    
   </script>
 </body>
 </html>
