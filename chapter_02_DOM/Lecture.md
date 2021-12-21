@@ -1,12 +1,12 @@
 # 👩🏻‍🏫 이번 파트에서 공부할 것들
 
-👉🏻 사람이 만든 웹페이지나 웹앱을 Browser가 어떻게 분석하여 정확한 위치에 표시하는지
+### 👉🏻 사람이 만든 웹페이지나 웹앱을 Browser가 어떻게 분석하여 정확한 위치에 표시하는지
 
-👉🏻 우리(사람)가 어떻게 DOM 요소를 조작할 수 있는지
+### 👉🏻 우리(사람)가 어떻게 DOM 요소를 조작할 수 있는지
 
-👉🏻 (심화) Browser가 렌더링하는 순서
+### 👉🏻 (심화) Browser가 렌더링하는 순서
 
-👉🏻 어떤 식으로 CSS를 쓰고 어떤 animation을 써야 Browser 성능에 좋은지
+### 👉🏻 어떤 식으로 CSS를 쓰고 어떤 animation을 써야 Browser 성능에 좋은지
 
 &nbsp;
 
@@ -64,3 +64,8 @@ HTML에 있는 요소(Element)들을 Document Object Model로 변환했는데,
 ### (CSS Object Model)
 
 &nbsp;
+
+<img width="1084" alt="스크린샷 2021-12-21 오후 10 29 02" src="https://user-images.githubusercontent.com/78816754/146939038-58922f18-83ff-48a6-9433-5bd13a5e61f4.png">
+
+<img width="1094" alt="스크린샷 2021-12-21 오후 10 32 08" src="https://user-images.githubusercontent.com/78816754/146939060-6f7e9e6f-8184-4557-adf9-034e39941728.png">
+
