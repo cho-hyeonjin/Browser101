@@ -34,10 +34,26 @@
   </head>
   <body>
     <section>
-      <img src="img/willsmith-genie.jpeg" alt="avatar" />
+      <!-- <img src="img/genie-blueman.jpeg" alt="genie-blueman" /> -->
+      <img src="img/willsmith-genie.jpeg" alt="willsmith-genie" />
       <h1 id="brand">🧞‍♂️Genie Coding</h1>
       <h3>If you can write the code, you can also be a wizard!</h3>
     </section>
     <span>🪄Let's go learn the basics of magic!✨</span>
+    <script>
+      // const image = document.querySelector('img[src="img/willsmith-genie.jpeg"]');
+      // const image = document.querySelector('img');
+      // const image = document.querySelectorAll('img');
+      // console.log(image);
+      
+      const section = document.querySelector('section');
+      const h2 = document.createElement('h2');
+      h2.setAttribute('class', 'title'); // <h2 class="title"></h2>
+      h2.textContent = 'This is a title'; // <h2 class="title">This is a title</h2>
+      // append는 최근에 추가된 것인데 검색해서 append와 appendChild의 차이를 살펴보면 좋음.
+      // section.appendChild(h2);
+      const h3 = document.querySelector('h3');
+      section.insertBefore(h2, h3);
+    </script>
   </body>
 </html>
