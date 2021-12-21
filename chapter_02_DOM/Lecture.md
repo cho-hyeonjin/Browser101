@@ -132,6 +132,14 @@ HTML에 있는 요소(Element)들을 Document Object Model로 변환했는데,
 
 <img width="944" alt="스크린샷 2021-12-21 오후 11 30 35" src="https://user-images.githubusercontent.com/78816754/146949905-31d823ec-1541-4442-b6e7-b0033fa8e616.png">
 
+### 나중에 CSS 작성할 때, 내가 사용하려는 속성값
+
+### 특히 animation, transition을 이용할 때 내가 사용하려는 css속성값이 무엇이냐 에 따라서
+
+### layout이 발생할 수도 있고, paint만 발생할 수도, composition만 발생할 수도 있다.
+
+### 같은 결과를 낸다면, composition만 발생하는 속성값을 쓰는 게 성능면으로 봤을 때 더 좋은 방향임.
+
 &nbsp;
 
 ---
@@ -151,8 +159,3 @@ HTML에 있는 요소(Element)들을 Document Object Model로 변환했는데,
 &nbsp;
 
 <img width="1102" alt="스크린샷 2021-12-21 오후 11 49 29" src="https://user-images.githubusercontent.com/78816754/146950259-fda6cc0e-cf94-4504-a842-55a9b28c5cd1.png">
-
-
-
-
-
