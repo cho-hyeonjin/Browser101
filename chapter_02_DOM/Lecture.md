@@ -130,8 +130,29 @@ HTML에 있는 요소(Element)들을 Document Object Model로 변환했는데,
 
 &nbsp;
 
+<img width="944" alt="스크린샷 2021-12-21 오후 11 30 35" src="https://user-images.githubusercontent.com/78816754/146949905-31d823ec-1541-4442-b6e7-b0033fa8e616.png">
+
+&nbsp;
+
 ---
 
 &nbsp;
 
 ## ✨ 레이어 순서
+
+&nbsp;
+
+<img width="851" alt="스크린샷 2021-12-21 오후 11 45 59" src="https://user-images.githubusercontent.com/78816754/146950172-305ff419-4f84-47ec-a1dd-42cc50521d77.png">
+
+&nbsp;
+
+<img width="404" alt="스크린샷 2021-12-21 오후 11 49 15" src="https://user-images.githubusercontent.com/78816754/146950233-262fa60b-ad30-4117-a668-1cbca5c481e1.png">
+
+&nbsp;
+
+<img width="1102" alt="스크린샷 2021-12-21 오후 11 49 29" src="https://user-images.githubusercontent.com/78816754/146950259-fda6cc0e-cf94-4504-a842-55a9b28c5cd1.png">
+
+
+
+
+
