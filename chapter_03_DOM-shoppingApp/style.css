@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+}
+
+button {
+  outline: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+body {
+  background-color: #ced3df;
+  text-align: center;
+}
+
+.list {
+  width: 400px;
+  margin: auto;
+  background-color: mintcream;
+  border-radius: 20px;
+}
+
+.header {
+  height: 48px;
+  padding: 8px;
+  font-size: 24px;
+  background: rgb(171, 255, 228);
+  background: linear-gradient(
+    51deg,
+    rgba(171, 255, 228, 1) 32%,
+    rgba(224, 255, 151, 1) 88%
+  );
+  border-radius: 20px 2px 0 0;
+  color: rgb(255, 255, 255);
+}
+
+.items {
+  height: 500px;
+  /* 이렇게 px단위로 쓰는 것은 접근성에 좋지 X. 좀 더 적합한 반응형 유닛 em, rem에 대해 공부해보자. */
+  overflow-y: auto;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 32px;
+}
+
+.item__delete {
+  font-size: 16px;
+  transition: all 300ms ease-in;
+}
+
+.item__delete:hover {
+  color: rgb(124, 245, 184);
+  transform: scale(1.1);
+}
+
+.item__divider {
+  width: 90%;
+  height: 1px;
+  background-color: silver;
+  margin: auto;
+}
+
+.footer {
+  background: rgb(171, 255, 228);
+  background: linear-gradient(
+    51deg,
+    rgba(171, 255, 228, 1) 32%,
+    rgba(224, 255, 151, 1) 88%
+  );
+  border-radius: 0 0 20px 20px;
+}
+
+.footer__input {
+  width: 100%;
+  height: 32px;
+  border: none;
+  outline: none;
+  font-size: 24px;
+  padding: 0 16px;
+}
+
+.footer__button {
+  width: 34px;
+  height: 34px;
+  font-size: 22px;
+  background-color: black;
+  border-radius: 50%;
+  color: white;
+  transition: transform 300ms ease-in;
+}
+
+.footer__button:hover {
+  transform: scale(1.1);
+}
