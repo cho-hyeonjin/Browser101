@@ -13,6 +13,8 @@ function onAdd() {
   const item = createItem(text);
   // 3. items container 안에 새로 만든 item 추가하기
   items.appendChild(item);
+  // +. 새로 추가된 아이템으로 스크롤링
+  item.scrollIntoView({ block: "center" });
   // 4. input 초기화하기
   input.value = "";
   input.focus();
@@ -51,4 +53,12 @@ function createItem(text) {
 // addBtn에 addEventListener를 등록해서, click 이벤트 발생시 onAdd()함수를 콜백함수로 호출할 것이다~
 addBtn.addEventListener("click", () => {
   onAdd();
+});
+
+// +버튼 클릭 대신 엔터를 눌러도 등록이 되게 하고싶다 --> input(querySelector로 footer__input클래스 선택해둠)에 addEventListener로 'keypress'이벤트 발생시 콜백으로 onAdd()함수 호출
+input.addEventListener("keypress", (event) => {
+  // event를 전달받아서, 그 event의 key가 Enter인 경우에만 onAdd()함수 호출
+  if (event.key === "Enter") {
+    onAdd();
+  }
 });
